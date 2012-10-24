@@ -7,7 +7,11 @@ In times of sudden and never-ending changes to ToS that we do not always agree o
 
 J3DILLA is a shell script that makes super easy and painless to generate a list of your .stl files and a showcase page for each of them so you can share them on **your own terms.**
 
-J3DILLA is built with [three.js](https://github.com/mrdoob/three.js/) 
+J3DILLA is built with [three.js](https://github.com/mrdoob/three.js/)
+
+###Demo###
+
+[http://fffff.at/J3DILLA/](http://fffff.at/J3DILLA/)
 
 ##Installation###
 1. unzip and download the "J3DILLA" directory to your server
@@ -33,10 +37,10 @@ You are ready to go!
 - #newaesthetic Donut(jdonut.stl)
 
 ###Author###
-Geraldine Juárez http://www.simple-mechanisms.com
+Geraldine Juárez [http://www.simple-mechanisms.com](http://www.simple-mechanisms.com)
 
 A FFFFFAT Lab Production
-http://fffff.at/3JDILLA
+[http://fffff.at/](http://fffff.at/)
 
 ###Thank you###
 Monki 
