@@ -16,7 +16,7 @@ J3DILLA is built with [three.js](https://github.com/mrdoob/three.js/)
 4. Go back to yourdomain/J3DILLA/index.html 
 You are ready to go!
 
-*when you add new .stl files just run the script at yourdomain/J3DILLA/runJ3Dilla.php again
+* when you add new .stl files just run the script at yourdomain/J3DILLA/runJ3Dilla.php again
 
 
 ### Options ###
@@ -27,7 +27,7 @@ You are ready to go!
 - J3DILLA.sh: this is the little shell script that 'runJ3Dilla.php' execute.
 
 ###Bonus objects###
-J3DILLA come with 3 objects:
+
 - F.A.T Lab swag (fat.stl)
 - low res FAT NIKA(http://fffff.at/f-a-t-nika/) (FATNIKA.stl)
 - #newaesthetic Donut(jdonut.stl)
