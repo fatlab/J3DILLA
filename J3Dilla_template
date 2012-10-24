@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>F.A.T | J3Dilla</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+ 		<link rel="stylesheet" type="text/css" href="style.css">			
+ 		</head>
+			
+	<body>
+	
+	<div id="ribbon"><a href="fffff.at"><img src="images/fatribbon.png"/></a><br><br>
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="I posted a new object in my #J3DILLA">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+		<div id="info">
+		<img src="images/logojdilla.png" alt="j3dilla" width="229" height="66" />
+		<p>Host your own data. Distribute the Web</p>
+		</div>
+		
+		<div id="space">
+		<p><a href="index.html"</a>My index</a></p>
+		<p>Download  <a href="myModels/xxx.stl">xxx.stl</a></a></p>
+		<!Change you license here>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a></p>
+		</div>
+
+		<script src="js/three.min.js"></script>
+
+		<script src="js/loaders/STLLoader.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/Stats.js"></script>
+
+
+		<script>
+
+			var container, stats;
+
+			var camera, scene, renderer;
+
+			var mouseX = 0, mouseY = 0;
+
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+
+
+			init();
+			animate();
+
+
+			function init() {
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 21;
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				var ambient = new THREE.AmbientLight( 0xfa5aff );
+				scene.add( ambient );
+
+				var directionalLight = new THREE.DirectionalLight( 0xffeedd );
+				directionalLight.position.set( 0, 0, 1 ).normalize();
+				scene.add( directionalLight );
+
+				// texture
+
+
+				var loader = new THREE.ImageLoader();
+				loader.addEventListener( 'load', function ( event ) {
+
+					texture.image = event.content;
+					texture.needsUpdate = true;
+
+				} );
+
+				// model
+
+				var loader = new THREE.STLLoader();
+				loader.addEventListener( 'load', function ( event ) {
+
+					var object = event.content;
+
+					for ( var i = 0, l = object.children.length; i < l; i ++ ) {
+
+
+					}
+
+					object.position.y = 0;
+					scene.add( object );
+
+				});
+				loader.load( 'myModels/xxx.stl' );
+
+				//
+
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / .5;
+				windowHalfY = window.innerHeight / .5;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+
+				mouseX = ( event.clientX - windowHalfX ) / .50;
+				mouseY = ( event.clientY - windowHalfY ) / .50;
+				mouseZ = ( event.clientz - windowHalfZ ) / .50;
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .02;
+				camera.position.y += ( - mouseY - camera.position.y ) * .02;
+
+				camera.lookAt( scene.position );
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+		</div>
+	</body>
+</html>

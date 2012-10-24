@@ -1,0 +1,76 @@
+body {
+				font-family: Arial;
+				background: yellow;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+
+			#info {
+				margin: 0px;
+				line-height: 0px;
+				padding: 0px;
+				font-family: Petit Formal Script;
+				color: #5f3f10;
+				position: relative;
+				top: 0px;
+				left:300px;
+				width: 100%;
+				display:block;
+				}
+				
+		#ribbon {
+				margin: 0px;
+				padding: 0px;
+				position: relative;
+				top: 0px;
+				left:0px;
+				width: 100px;
+				
+
+			}
+			#space {
+				color: dark grey;
+				position: absolute;
+				top: 100px;
+				width: 100%;
+				left: 700px;
+				display: block;
+
+			}
+			
+			#list {
+				visibility: visible;
+				text-transform: none;
+				font-size: 14px;
+				text-decoration: none;
+				font-family: Arial;
+				list-style-type: none;
+				color: dark grey;
+				position: absolute;
+				top: 200px;
+				width: 100%;
+				left: 300px;
+				display: block;
+
+			}
+
+			a { 
+			font-family: Arial; 
+			background-color: white;
+			color: fuchsia; }
+
+			a:visited {
+			                	color: fuchsia;
+			                	background-color: white;
+			                	text-decoration: none;
+			                }
+
+			a:hover {
+			                	text-decoration: none;
+			                	color: white;
+			                	background-color: fuchsia;
+			                }
+			
+	
+			}
