@@ -10,7 +10,7 @@
 			
 	<body>
 	
-	<div id="ribbon"><a href="fffff.at"><img src="images/fatribbon.png"/></a><br><br>
+	<div id="ribbon"><a href="http://fffff.at"><img src="images/fatribbon.png"/></a><br><br>
 <a href="https://twitter.com/share" class="twitter-share-button" data-text="I posted a new object in my #J3DILLA">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
